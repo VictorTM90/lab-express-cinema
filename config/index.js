@@ -5,9 +5,6 @@ const express = require("express");
 // https://www.npmjs.com/package/morgan
 const logger = require("morgan");
 
-// ℹ️ Needed when we deal with cookies (we will when dealing with authentication)
-// https://www.npmjs.com/package/cookie-parser
-const cookieParser = require("cookie-parser");
 
 // ℹ️ Serves a custom favicon on each request
 // https://www.npmjs.com/package/serve-favicon
@@ -25,7 +22,6 @@ module.exports = (app) => {
   // To have access to `body` property in the request
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
-  app.use(cookieParser());
 
   // Normalizes the path to the views folder
   app.set("views", path.join(__dirname, "..", "views"));
@@ -36,4 +32,5 @@ module.exports = (app) => {
 
   // Handles access to the favicon
   app.use(favicon(path.join(__dirname, "..", "public", "images", "favicon.ico")));
+
 };
