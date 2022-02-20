@@ -17,7 +17,21 @@ router.get("/movies", (req, res, next) => {
     });
 })
 
+router.get ("/movies/:id", (req, res, next)=> {
+  
 
+  return Pelicula.findById(req.params.id) //=>  objeto que contiene el id del parámetro dinámico
+  .then((response)=>{
+
+   // console.log(response) => para comprobar objeto 
+
+    res.render("movie-details.hbs", {response})
+
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
+})
 
 //Get details
 

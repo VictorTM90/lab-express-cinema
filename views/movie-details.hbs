@@ -1,0 +1,22 @@
+<div id="section-movie">
+
+  <img src="{{response.image}}" alt="{{response.title}}" />
+  <section id=" movie-details">
+    <h3>{{response.title}}</h3>
+
+    <h4>{{response.director}}</h4>
+    <h5>Stars </h5>
+    {{#each response.stars}}
+      <li>{{this}}</li>
+    {{/each}}
+
+    <p>{{response.description}}</p>
+    <p>
+      {{#each response.showtimes}}
+        <span> {{this}} </span>
+      {{/each}}
+    </p>
+
+  </section>
+
+</div>
