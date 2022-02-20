@@ -1,5 +1,7 @@
-<div>
+<div id="section-movies" >
 <h2>films</h2>
+<div class="section-movies-block">
+<article class="section-movies-item">
 {{response.title}}
 {{#each response}}
 
@@ -7,8 +9,9 @@
   
     <h4>{{title}}</h4>  
 
-    <a href="/movies/{{this._id}}">See more</a>
-
+    <p><a href="/movies/{{this._id}}">See more</a></p>
 {{/each}}
+</article >
+</div>
 
 </div>

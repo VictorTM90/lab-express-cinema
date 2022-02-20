@@ -6,3 +6,41 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+#iron-films{
+  background-image: "/public/images/cinema.jpg";
+}
+
+#section-movies{
+  align-items: center;
+  width: 1000px;
+  height: auto;
+  
+}
+
+.section-movies-block{
+  display: flex;
+  align-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.section-movies-item{
+ 
+  width:150px;
+  height: 200px; 
+  padding: 20px;
+  margin: 20px; 
+}
+
+.section-movies-item h4{
+  margin:2%;
+}
+.section-movies-item p{
+  margin: 5px 5px 10px 5px;
+
+}
